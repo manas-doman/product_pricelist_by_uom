@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="product_pricelist_item_by_uom_form_view" model="ir.ui.view">
+        <field name="name">product.pricelist.item.by.uom.form</field>
+        <field name="model">product.pricelist.item</field>
+        <field name="inherit_id" ref="product.product_pricelist_item_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet/group[@name='pricelist_rule_computation']/group[@name='pricelist_rule_method']/field[@name='product_id']"
+                   position="after">
+                <field name="pricelist_uom_id" invisible="display_applied_on != '1_product'"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
