@@ -39,6 +39,10 @@ etc.).
     'data': [
         'views/product_pricelist_item_views.xml',
     ],
+    "images": [
+        "static/description/banner.png",
+        "static/description/icon.png",
+    ],
     'post_init_hook': '_post_init_hook',
     'installable': True,
     'auto_install': False,
